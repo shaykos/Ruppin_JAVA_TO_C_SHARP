@@ -4,6 +4,7 @@
     {
 
         #region Q1 - Print a right-angled triangle of stars
+
         //לכתוב תוכנית שקולטת מספר שלם  שמהווה את הבסיס
         //ומדפיסה משולש ישר זווית צמוד לשמאל
         //למשל אם הבסיס הוא 5 אז התוכנית תדפיס את המשולש הבא:
@@ -18,6 +19,7 @@
         Console.WriteLine("Enter a base number:");
         int baseNumber = int.Parse(Console.ReadLine());
         PrintRightAngledTriangle(baseNumber);
+
         #endregion
 
 
@@ -30,29 +32,34 @@
             כי (3 + 7 + 2) / 3 = 4
         */
 
-        Console.Write("Enter an integer: ");
+        Console.Write("Enter an integer to calculate the average of its digits: ");
         int number = int.Parse(Console.ReadLine());
         int sum = SumOfDigits(number); //חישוב סכום הספרות
-        int count = CountDigits(number); //חישוב מספר הספרות
+        int count = CountDigits(number); //חישוב כמות הספרות
 
-        //נבדוק אם יש ספרות לחישוב הממוצע כדי למנוע חלוקה באפס
-        if(count > 0)
+        if (count > 0)
         {
+            //חוק הברזל -> שלם/שלם = שלם
             double average = (double)sum / count; //חישוב הממוצע
-            Console.WriteLine($"The average of the digits is: {average}");
+            Console.WriteLine($"The average of the digits is: {average:f2}"); //הדפסת הממוצע עם 2 ספרות אחרי הנקודה
         }
         else
         {
-            Console.WriteLine("No digits to calculate average.");
+            Console.WriteLine("No digits to calculate the average.");
         }
+
         #endregion
-    
+
+
+
         #region Q3 - Add 10 to a number using a method with ref parameter
+        
         Console.Write("Enter a number to add 10: ");
         int numToAdd = int.Parse(Console.ReadLine());
         Console.WriteLine($"The original number is: {numToAdd}");
         Add10(ref numToAdd); //קריאה לפונקציה שמוסיפה 10 למספר
         Console.WriteLine($"The result after adding 10 is: {numToAdd}");
+        
         #endregion
     }
 
