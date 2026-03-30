@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿using ConsoleApp1;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -47,7 +49,6 @@
         Digits: 11
         */
         #endregion
-
 
         #region Arrays - Part 1
 
@@ -102,33 +103,33 @@
         התוכנית תדפיס את כל המספרים שהם מעל לממוצע.
         */
 
-        Console.Write("How many decimal numbers do you want to enter? ");
-        int size = int.Parse(Console.ReadLine());
-        double[] numbers = new double[size];
+        // Console.Write("How many decimal numbers do you want to enter? ");
+        // int size = int.Parse(Console.ReadLine());
+        // double[] numbers = new double[size];
 
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            Console.Write($"Enter decimal number {i + 1}: ");
-            numbers[i] = double.Parse(Console.ReadLine());
-        }
+        // for (int i = 0; i < numbers.Length; i++)
+        // {
+        //     Console.Write($"Enter decimal number {i + 1}: ");
+        //     numbers[i] = double.Parse(Console.ReadLine());
+        // }
 
-        double sum = 0;
-        foreach (double number in numbers)
-        {
-            sum += number;
-        }   
+        // double sum = 0;
+        // foreach (double number in numbers)
+        // {
+        //     sum += number;
+        // }   
 
-        double average = sum / numbers.Length;
-        Console.WriteLine($"Average: {average}");
+        // double average = sum / numbers.Length;
+        // Console.WriteLine($"Average: {average}");
 
-        Console.WriteLine("Numbers above average:");
-        foreach (double number in numbers)
-        {
-            if (number > average)
-            {
-                Console.WriteLine(number);
-            }
-        }
+        // Console.WriteLine("Numbers above average:");
+        // foreach (double number in numbers)
+        // {
+        //     if (number > average)
+        //     {
+        //         Console.WriteLine(number);
+        //     }
+        // }
 
         /*
         How many decimal numbers do you want to enter? 4
@@ -143,7 +144,59 @@
 
         #endregion
 
+        #region Multidimensional Arrays
 
+        // int[,] matrix = new int[3, 4];
+        // // GetLength(0) - number of rows --> 3
+        // // GetLength(1) - number of columns --> 4
+        // for (int r = 0; r < matrix.GetLength(0); r++)
+        // {
+        //     for (int c = 0; c < matrix.GetLength(1); c++)
+        //     {
+        //         Console.Write($"Enter value for cell [{r}, {c}]: ");
+        //         matrix[r, c] = int.Parse(Console.ReadLine());
+        //     }
+        // }
+
+        // for (int r = 0; r < matrix.GetLength(0); r++)
+        // {
+        //     for (int c = 0; c < matrix.GetLength(1); c++)
+        //     {
+        //         Console.Write(matrix[r, c] + "\t");
+        //     }
+        //     Console.WriteLine();
+        // }
+
+        /*
+        
+        Enter value for cell [0, 0]: 1
+        Enter value for cell [0, 1]: 2
+        Enter value for cell [0, 2]: 3
+        Enter value for cell [0, 3]: 4
+        Enter value for cell [1, 0]: 5
+        Enter value for cell [1, 1]: 6
+        Enter value for cell [1, 2]: 7
+        Enter value for cell [1, 3]: 8
+        Enter value for cell [2, 0]: 9
+        Enter value for cell [2, 1]: 10
+        Enter value for cell [2, 2]: 11
+        Enter value for cell [2, 3]: 12
+        1       2       3       4
+        5       6       7       8
+        9       10      11      12
+        
+        */
+
+        #endregion
+    
+        #region Obejcts and Classes
+
+        Dog rocky = new Dog("Rocky", 5, "Bulldog");
+        rocky.Bark();
+        rocky.Bark();
+        rocky.DisplayInfo();
+
+        #endregion
     }
 
 }
