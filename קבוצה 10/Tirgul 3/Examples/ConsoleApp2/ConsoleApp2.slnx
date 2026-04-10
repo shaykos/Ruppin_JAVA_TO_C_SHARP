@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../ConsoleApp3/ConsoleApp3.csproj" />
+  <Project Path="../Tar_Kita1/Tar_Kita1.csproj" />
+  <Project Path="ConsoleApp2.csproj" />
+</Solution>
